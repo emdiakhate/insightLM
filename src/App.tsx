@@ -10,36 +10,119 @@ import Dashboard from "./pages/Dashboard";
 import Notebook from "./pages/Notebook";
 import Auth from "./pages/Auth";
 import NotFound from "./pages/NotFound";
+import { LegalLayout } from "@/components/legal/LegalLayout";
+import {
+  LegalHub,
+  CalculatorPage,
+  GeneratorPage,
+  SimulationPage,
+  DashboardPage,
+  TemplatesPage,
+  JurisprudencePage,
+} from "./pages/legal";
 
 const queryClient = new QueryClient();
 
 const AppContent = () => {
   return (
     <Routes>
-      <Route 
-        path="/" 
+      <Route
+        path="/"
         element={
           <ProtectedRoute fallback={<Auth />}>
             <Dashboard />
           </ProtectedRoute>
-        } 
+        }
       />
-      <Route 
-        path="/notebook" 
+      <Route
+        path="/notebook"
         element={
           <ProtectedRoute fallback={<Auth />}>
             <Notebook />
           </ProtectedRoute>
-        } 
+        }
       />
-      <Route 
-        path="/notebook/:id" 
+      <Route
+        path="/notebook/:id"
         element={
           <ProtectedRoute fallback={<Auth />}>
             <Notebook />
           </ProtectedRoute>
-        } 
+        }
       />
+
+      {/* Legal Tools Routes */}
+      <Route
+        path="/legal"
+        element={
+          <ProtectedRoute fallback={<Auth />}>
+            <LegalLayout>
+              <LegalHub />
+            </LegalLayout>
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/legal/calculator"
+        element={
+          <ProtectedRoute fallback={<Auth />}>
+            <LegalLayout>
+              <CalculatorPage />
+            </LegalLayout>
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/legal/generator"
+        element={
+          <ProtectedRoute fallback={<Auth />}>
+            <LegalLayout>
+              <GeneratorPage />
+            </LegalLayout>
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/legal/simulation"
+        element={
+          <ProtectedRoute fallback={<Auth />}>
+            <LegalLayout>
+              <SimulationPage />
+            </LegalLayout>
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/legal/dashboard"
+        element={
+          <ProtectedRoute fallback={<Auth />}>
+            <LegalLayout>
+              <DashboardPage />
+            </LegalLayout>
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/legal/templates"
+        element={
+          <ProtectedRoute fallback={<Auth />}>
+            <LegalLayout>
+              <TemplatesPage />
+            </LegalLayout>
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/legal/jurisprudence"
+        element={
+          <ProtectedRoute fallback={<Auth />}>
+            <LegalLayout>
+              <JurisprudencePage />
+            </LegalLayout>
+          </ProtectedRoute>
+        }
+      />
+
       <Route path="/auth" element={<Auth />} />
       <Route path="*" element={<NotFound />} />
     </Routes>

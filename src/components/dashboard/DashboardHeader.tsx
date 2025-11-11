@@ -1,6 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { User, LogOut, Globe } from 'lucide-react';
+import { User, LogOut, Globe, Scale, Sparkles } from 'lucide-react';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger, DropdownMenuSeparator } from '@/components/ui/dropdown-menu';
 import { useLogout } from '@/services/authService';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -15,14 +16,23 @@ const DashboardHeader = ({ userEmail }: DashboardHeaderProps) => {
   const { t, language, setLanguage } = useLanguage();
 
   return (
-    <header className="bg-white px-6 py-4">
+    <header className="bg-white px-6 py-4 border-b border-gray-200">
       <div className="flex items-center justify-between">
         <div className="flex items-center space-x-2">
           <Logo />
-          <h1 className="text-xl font-medium text-gray-900">YnnoviaLM</h1>
+          <h1 className="text-xl font-medium text-gray-900">LexAI Sénégal</h1>
         </div>
-        
+
         <div className="flex items-center space-x-4">
+          {/* Accès rapide Outils Juridiques */}
+          <Link to="/legal">
+            <Button className="bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white shadow-md">
+              <Scale className="h-4 w-4 mr-2" />
+              Outils Juridiques
+              <Sparkles className="h-3 w-3 ml-2" />
+            </Button>
+          </Link>
+
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="ghost" size="sm" className="p-0">

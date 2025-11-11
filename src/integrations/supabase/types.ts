@@ -238,6 +238,103 @@ export type Database = {
           },
         ]
       }
+      legal_knowledge_base: {
+        Row: {
+          id: string
+          type: Database["public"]["Enums"]["legal_document_type"]
+          jurisdiction: string | null
+          article_number: string | null
+          title: string
+          content: string
+          summary: string | null
+          metadata: Json | null
+          embedding: string | null
+          is_active: boolean | null
+          is_frequently_used: boolean | null
+          created_at: string
+          updated_at: string
+        }
+        Insert: {
+          id?: string
+          type: Database["public"]["Enums"]["legal_document_type"]
+          jurisdiction?: string | null
+          article_number?: string | null
+          title: string
+          content: string
+          summary?: string | null
+          metadata?: Json | null
+          embedding?: string | null
+          is_active?: boolean | null
+          is_frequently_used?: boolean | null
+          created_at?: string
+          updated_at?: string
+        }
+        Update: {
+          id?: string
+          type?: Database["public"]["Enums"]["legal_document_type"]
+          jurisdiction?: string | null
+          article_number?: string | null
+          title?: string
+          content?: string
+          summary?: string | null
+          metadata?: Json | null
+          embedding?: string | null
+          is_active?: boolean | null
+          is_frequently_used?: boolean | null
+          created_at?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      legal_article_usage_stats: {
+        Row: {
+          id: string
+          article_id: string | null
+          user_id: string | null
+          notebook_id: string | null
+          action_type: string
+          created_at: string
+        }
+        Insert: {
+          id?: string
+          article_id?: string | null
+          user_id?: string | null
+          notebook_id?: string | null
+          action_type: string
+          created_at?: string
+        }
+        Update: {
+          id?: string
+          article_id?: string | null
+          user_id?: string | null
+          notebook_id?: string | null
+          action_type?: string
+          created_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "legal_article_usage_stats_article_id_fkey"
+            columns: ["article_id"]
+            isOneToOne: false
+            referencedRelation: "legal_knowledge_base"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "legal_article_usage_stats_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "legal_article_usage_stats_notebook_id_fkey"
+            columns: ["notebook_id"]
+            isOneToOne: false
+            referencedRelation: "notebooks"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
     }
     Views: {
       [_ in never]: never
@@ -308,6 +405,38 @@ export type Database = {
           similarity: number
         }[]
       }
+      match_legal_documents: {
+        Args: {
+          query_embedding: string
+          match_count?: number
+          filter_type?: Database["public"]["Enums"]["legal_document_type"]
+          filter_jurisdiction?: string
+        }
+        Returns: {
+          id: string
+          type: Database["public"]["Enums"]["legal_document_type"]
+          article_number: string
+          title: string
+          content: string
+          summary: string
+          metadata: Json
+          similarity: number
+        }[]
+      }
+      find_article_by_number: {
+        Args: {
+          article_num: string
+          doc_type?: Database["public"]["Enums"]["legal_document_type"]
+        }
+        Returns: {
+          id: string
+          type: Database["public"]["Enums"]["legal_document_type"]
+          article_number: string
+          title: string
+          content: string
+          metadata: Json
+        }[]
+      }
       sparsevec_out: {
         Args: { "": unknown }
         Returns: unknown
@@ -347,6 +476,19 @@ export type Database = {
     }
     Enums: {
       source_type: "pdf" | "text" | "website" | "youtube" | "audio"
+      legal_document_type:
+        | "code_penal"
+        | "code_civil"
+        | "code_procedure_penale"
+        | "code_procedure_civile"
+        | "code_travail"
+        | "code_commerce"
+        | "code_famille"
+        | "ohada"
+        | "jurisprudence"
+        | "loi"
+        | "decret"
+        | "arrete"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -463,6 +605,20 @@ export const Constants = {
   public: {
     Enums: {
       source_type: ["pdf", "text", "website", "youtube", "audio"],
+      legal_document_type: [
+        "code_penal",
+        "code_civil",
+        "code_procedure_penale",
+        "code_procedure_civile",
+        "code_travail",
+        "code_commerce",
+        "code_famille",
+        "ohada",
+        "jurisprudence",
+        "loi",
+        "decret",
+        "arrete",
+      ],
     },
   },
 } as const

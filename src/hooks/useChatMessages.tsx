@@ -264,8 +264,8 @@ export const useChatMessages = (notebookId?: string) => {
     }) => {
       if (!user) throw new Error('User not authenticated');
 
-      // Call the n8n webhook
-      const webhookResponse = await supabase.functions.invoke('send-chat-message', {
+      // Call the legal chat edge function (juridique avec base de connaissances)
+      const webhookResponse = await supabase.functions.invoke('send-legal-chat-message', {
         body: {
           session_id: messageData.notebookId,
           message: messageData.content,

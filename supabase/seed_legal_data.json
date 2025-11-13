@@ -1,0 +1,627 @@
+[
+  {
+    "type": "code_penal",
+    "article_number": "Art. 379",
+    "title": "Vol simple",
+    "content": "Quiconque soustrait frauduleusement une chose appartenant à autrui est coupable de vol et puni d'un emprisonnement de un à cinq ans et d'une amende de 20.000 à 500.000 francs ou de l'une de ces deux peines seulement.",
+    "summary": "Définition et peine du vol simple au Sénégal",
+    "metadata": {
+      "source": "Code Pénal sénégalais - Loi n°65-60 du 21 juillet 1965",
+      "livre": "Livre III - Des crimes et délits contre les biens",
+      "titre": "Des vols",
+      "date_publication": "1965-07-21",
+      "references": ["Art. 380", "Art. 381"]
+    }
+  },
+  {
+    "type": "code_penal",
+    "article_number": "Art. 380",
+    "title": "Vol qualifié - Circonstances aggravantes",
+    "content": "Le vol est puni de la réclusion criminelle de cinq à dix ans lorsqu'il a été commis avec l'une des circonstances suivantes : 1° Par deux ou plusieurs personnes agissant comme coauteurs ; 2° À l'aide d'escalade, d'effraction intérieure ou extérieure, de fausses clefs ou de clefs indûment obtenues ; 3° Par une personne porteuse d'une arme apparente ou cachée, même non utilisée ; 4° Pendant la nuit ; 5° Avec violence sur les personnes.",
+    "summary": "Circonstances aggravantes du vol (réclusion 5-10 ans)",
+    "metadata": {
+      "source": "Code Pénal sénégalais",
+      "livre": "Livre III",
+      "date_publication": "1965-07-21",
+      "references": ["Art. 379", "Art. 381"]
+    }
+  },
+  {
+    "type": "code_penal",
+    "article_number": "Art. 319",
+    "title": "Homicide volontaire",
+    "content": "Quiconque volontairement tue autrui est coupable de meurtre. Le meurtre est puni de la réclusion criminelle à perpétuité.",
+    "summary": "Définition et peine du meurtre",
+    "metadata": {
+      "source": "Code Pénal sénégalais",
+      "livre": "Livre II - Des crimes et délits contre les personnes",
+      "titre": "Des atteintes à la vie",
+      "date_publication": "1965-07-21"
+    }
+  },
+  {
+    "type": "code_penal",
+    "article_number": "Art. 295",
+    "title": "Coups et blessures volontaires",
+    "content": "Quiconque volontairement fait des blessures ou porte des coups à autrui est puni d'un emprisonnement de un mois à deux ans et d'une amende de 20.000 à 200.000 francs ou de l'une de ces deux peines seulement.",
+    "summary": "Peine pour coups et blessures volontaires",
+    "metadata": {
+      "source": "Code Pénal sénégalais",
+      "livre": "Livre II",
+      "titre": "Des coups et blessures",
+      "date_publication": "1965-07-21"
+    }
+  },
+  {
+    "type": "code_penal",
+    "article_number": "Art. 296",
+    "title": "Coups et blessures avec circonstances aggravantes",
+    "content": "Si les coups portés ou les blessures faites volontairement mais sans intention de donner la mort l'ont pourtant occasionnée, le coupable sera puni de la réclusion criminelle de cinq à dix ans.",
+    "summary": "Coups ayant entraîné la mort sans intention de la donner",
+    "metadata": {
+      "source": "Code Pénal sénégalais",
+      "livre": "Livre II",
+      "date_publication": "1965-07-21",
+      "references": ["Art. 295"]
+    }
+  },
+  {
+    "type": "code_penal",
+    "article_number": "Art. 320",
+    "title": "Assassinat",
+    "content": "Le meurtre commis avec préméditation constitue l'assassinat. L'assassinat est puni de mort.",
+    "summary": "Définition de l'assassinat et peine capitale",
+    "metadata": {
+      "source": "Code Pénal sénégalais",
+      "livre": "Livre II",
+      "date_publication": "1965-07-21",
+      "note": "La peine de mort a été abolie au Sénégal en 2004",
+      "references": ["Art. 319"]
+    }
+  },
+  {
+    "type": "code_penal",
+    "article_number": "Art. 323",
+    "title": "Circonstances atténuantes",
+    "content": "Dans les cas où la peine de mort est encourue, si des circonstances atténuantes sont admises, la peine est la réclusion criminelle à perpétuité ou à temps de cinq à vingt ans.",
+    "summary": "Application des circonstances atténuantes en matière criminelle",
+    "metadata": {
+      "source": "Code Pénal sénégalais",
+      "livre": "Livre II",
+      "date_publication": "1965-07-21"
+    }
+  },
+  {
+    "type": "code_penal",
+    "article_number": "Art. 383",
+    "title": "Escroquerie",
+    "content": "Quiconque, soit en faisant usage de faux nom ou de fausse qualité, soit en employant des manœuvres frauduleuses pour persuader l'existence de fausses entreprises, d'un pouvoir ou d'un crédit imaginaire, ou pour faire naître l'espérance ou la crainte d'un succès, d'un accident ou de tout autre événement chimérique, se fait remettre ou délivrer des fonds, des meubles ou des obligations, dispositions, billets, promesses, quittances ou décharges et, par un de ces moyens, escroqué tout ou partie de la fortune d'autrui, est puni d'un emprisonnement de un à cinq ans et d'une amende de 100.000 à 1.500.000 francs.",
+    "summary": "Définition et peine de l'escroquerie",
+    "metadata": {
+      "source": "Code Pénal sénégalais",
+      "livre": "Livre III",
+      "date_publication": "1965-07-21"
+    }
+  },
+  {
+    "type": "code_penal",
+    "article_number": "Art. 384",
+    "title": "Abus de confiance",
+    "content": "Quiconque détourne ou dissipe au préjudice d'autrui des effets, deniers, marchandises, billets, quittances ou tous autres écrits contenant ou opérant obligation ou décharge, qui ne lui ont été remis qu'à titre de louage, de dépôt, de mandat, de nantissement, de prêt à usage ou pour un travail salarié ou non salarié, à charge de les rendre ou représenter, ou d'en faire un usage ou un emploi déterminé, est coupable d'abus de confiance et puni d'un emprisonnement de un à cinq ans et d'une amende de 20.000 à 1.000.000 francs ou de l'une de ces deux peines seulement.",
+    "summary": "Définition et peine de l'abus de confiance",
+    "metadata": {
+      "source": "Code Pénal sénégalais",
+      "livre": "Livre III",
+      "date_publication": "1965-07-21"
+    }
+  },
+  {
+    "type": "code_procedure_penale",
+    "article_number": "Art. 51",
+    "title": "Durée maximale de la garde à vue",
+    "content": "La garde à vue ne peut excéder quarante-huit heures. Toutefois, elle peut être prolongée de quarante-huit heures sur autorisation écrite du Procureur de la République. La personne gardée à vue doit être informée immédiatement de ses droits, notamment du droit de faire prévenir un proche et d'être examinée par un médecin.",
+    "summary": "Durée maximale de la garde à vue : 48h + 48h",
+    "metadata": {
+      "source": "Code de Procédure Pénale sénégalais",
+      "date_publication": "1965",
+      "references": ["Art. 52", "Art. 53"]
+    }
+  },
+  {
+    "type": "code_procedure_penale",
+    "article_number": "Art. 137",
+    "title": "Détention provisoire - Durée maximale",
+    "content": "La détention provisoire ne peut excéder six mois en matière correctionnelle. Ce délai peut être prorogé de six mois par ordonnance motivée du juge d'instruction. En matière criminelle, la détention provisoire ne peut excéder un an. Elle peut être prorogée pour une période de six mois renouvelable.",
+    "summary": "Durées maximales de la détention provisoire",
+    "metadata": {
+      "source": "Code de Procédure Pénale sénégalais",
+      "date_publication": "1965",
+      "references": ["Art. 138", "Art. 139"]
+    }
+  },
+  {
+    "type": "code_procedure_penale",
+    "article_number": "Art. 125",
+    "title": "Mise en liberté provisoire",
+    "content": "La personne mise en examen ou le Procureur de la République peuvent demander au juge d'instruction la mise en liberté provisoire à tout moment de l'instruction. Le juge d'instruction doit statuer dans les cinq jours de la demande par ordonnance motivée. La mise en liberté peut être assortie du contrôle judiciaire ou d'une caution.",
+    "summary": "Procédure de demande de liberté provisoire",
+    "metadata": {
+      "source": "Code de Procédure Pénale sénégalais",
+      "date_publication": "1965",
+      "references": ["Art. 126", "Art. 127"]
+    }
+  },
+  {
+    "type": "code_procedure_penale",
+    "article_number": "Art. 189",
+    "title": "Délai d'appel en matière pénale",
+    "content": "L'appel doit être interjeté dans le délai de dix jours à compter du prononcé du jugement pour les parties présentes ou représentées, et dans le délai d'un mois à compter de la signification pour les parties défaillantes. Le délai d'appel suspend l'exécution du jugement.",
+    "summary": "Délai d'appel : 10 jours (présents) ou 1 mois (défaillants)",
+    "metadata": {
+      "source": "Code de Procédure Pénale sénégalais",
+      "date_publication": "1965",
+      "references": ["Art. 190", "Art. 191"]
+    }
+  },
+  {
+    "type": "code_procedure_penale",
+    "article_number": "Art. 490",
+    "title": "Pourvoi en cassation - Délai",
+    "content": "Le pourvoi en cassation doit être formé dans le délai de deux mois à compter de la signification de l'arrêt. Le délai court à compter du jour où la partie a eu connaissance de la décision si elle n'était pas présente.",
+    "summary": "Délai pour former un pourvoi en cassation : 2 mois",
+    "metadata": {
+      "source": "Code de Procédure Pénale sénégalais",
+      "date_publication": "1965"
+    }
+  },
+  {
+    "type": "code_civil",
+    "article_number": "Art. 1382",
+    "title": "Responsabilité civile délictuelle",
+    "content": "Tout fait quelconque de l'homme qui cause à autrui un dommage oblige celui par la faute duquel il est arrivé à le réparer. La victime doit prouver la faute, le dommage et le lien de causalité entre les deux.",
+    "summary": "Principe général de la responsabilité civile",
+    "metadata": {
+      "source": "Code Civil sénégalais",
+      "livre": "Livre III - Des différentes manières dont on acquiert la propriété",
+      "titre": "Des obligations qui naissent sans convention",
+      "date_publication": "1963"
+    }
+  },
+  {
+    "type": "code_civil",
+    "article_number": "Art. 1383",
+    "title": "Responsabilité pour négligence",
+    "content": "Chacun est responsable du dommage qu'il a causé non seulement par son fait, mais encore par sa négligence ou par son imprudence.",
+    "summary": "Responsabilité pour faute par négligence ou imprudence",
+    "metadata": {
+      "source": "Code Civil sénégalais",
+      "livre": "Livre III",
+      "date_publication": "1963",
+      "references": ["Art. 1382"]
+    }
+  },
+  {
+    "type": "code_travail",
+    "article_number": "Art. L. 17",
+    "title": "Contrat à durée indéterminée",
+    "content": "Le contrat de travail à durée indéterminée peut toujours cesser par la volonté de l'une des parties. La partie qui prend l'initiative de la rupture doit respecter un préavis dont la durée est déterminée par voie réglementaire ou par convention collective.",
+    "summary": "Rupture du CDI et obligation de préavis",
+    "metadata": {
+      "source": "Code du Travail sénégalais - Loi n° 97-17 du 1er décembre 1997",
+      "livre": "Livre Ier - Dispositions générales",
+      "titre": "Du contrat de travail",
+      "date_publication": "1997-12-01"
+    }
+  },
+  {
+    "type": "code_travail",
+    "article_number": "Art. L. 43",
+    "title": "Motifs de licenciement",
+    "content": "Le licenciement d'un travailleur ne peut intervenir que pour un motif légitime lié à son aptitude ou à sa conduite, ou fondé sur les nécessités du fonctionnement de l'entreprise. Le licenciement pour motif économique doit être justifié par des difficultés économiques ou des mutations technologiques.",
+    "summary": "Définition des motifs légitimes de licenciement",
+    "metadata": {
+      "source": "Code du Travail sénégalais",
+      "date_publication": "1997-12-01",
+      "references": ["Art. L. 44", "Art. L. 45"]
+    }
+  },
+  {
+    "type": "code_travail",
+    "article_number": "Art. L. 52",
+    "title": "Indemnité de licenciement",
+    "content": "Tout travailleur licencié alors qu'il compte au moins un an d'ancienneté dans l'entreprise a droit, sauf en cas de faute lourde, à une indemnité de licenciement distincte du préavis. Le montant de l'indemnité est déterminé en pourcentage du salaire mensuel moyen multiplié par le nombre d'années de service.",
+    "summary": "Droit à indemnité de licenciement après 1 an d'ancienneté",
+    "metadata": {
+      "source": "Code du Travail sénégalais",
+      "date_publication": "1997-12-01"
+    }
+  },
+  {
+    "type": "code_famille",
+    "article_number": "Art. 277",
+    "title": "Obligation alimentaire entre époux",
+    "content": "Les époux se doivent mutuellement assistance. Ils sont tenus de contribuer aux charges du ménage en proportion de leurs facultés respectives. Si l'un des époux ne remplit pas ses obligations, il peut y être contraint par l'autre dans les formes prévues par le Code de Procédure Civile.",
+    "summary": "Devoir d'assistance et contribution aux charges du ménage",
+    "metadata": {
+      "source": "Code de la Famille sénégalais - Loi n° 72-61 du 12 juin 1972",
+      "livre": "Livre IV - Du mariage",
+      "titre": "Des effets du mariage",
+      "date_publication": "1972-06-12"
+    }
+  },
+  {
+    "type": "code_famille",
+    "article_number": "Art. 330",
+    "title": "Causes de divorce",
+    "content": "Le divorce peut être prononcé dans les cas suivants : 1° Pour faute ; 2° Pour consentement mutuel ; 3° Pour rupture de la vie commune. La demande en divorce pour faute peut être fondée notamment sur l'adultère, la condamnation à une peine afflictive et infamante, les sévices ou injures graves.",
+    "summary": "Les trois causes de divorce au Sénégal",
+    "metadata": {
+      "source": "Code de la Famille sénégalais",
+      "livre": "Livre IV",
+      "titre": "De la dissolution du mariage",
+      "date_publication": "1972-06-12"
+    }
+  },
+  {
+    "type": "code_famille",
+    "article_number": "Art. 386",
+    "title": "Pension alimentaire pour les enfants",
+    "content": "Les père et mère sont tenus de nourrir, entretenir et élever leurs enfants. Cette obligation subsiste même après le divorce. Le juge fixe le montant de la pension alimentaire en tenant compte des ressources du débiteur et des besoins du créancier.",
+    "summary": "Obligation de pension alimentaire des parents",
+    "metadata": {
+      "source": "Code de la Famille sénégalais",
+      "livre": "Livre V - De la filiation",
+      "date_publication": "1972-06-12"
+    }
+  },
+  {
+    "type": "code_penal",
+    "article_number": "Art. 285",
+    "title": "Viol",
+    "content": "Le viol est un acte de pénétration sexuelle de quelque nature qu'il soit, commis sur la personne d'autrui par violence, contrainte, menace ou surprise. Le viol est puni de la réclusion criminelle de cinq à dix ans.",
+    "summary": "Définition du viol et peine (5-10 ans)",
+    "metadata": {
+      "source": "Code Pénal sénégalais",
+      "livre": "Livre II",
+      "titre": "Des crimes contre les mœurs",
+      "date_publication": "1965-07-21"
+    }
+  },
+  {
+    "type": "code_penal",
+    "article_number": "Art. 286",
+    "title": "Viol avec circonstances aggravantes",
+    "content": "Le viol est puni de la réclusion criminelle de dix à vingt ans lorsqu'il a été commis : 1° Sur un mineur de treize ans ; 2° Sur une personne particulièrement vulnérable ; 3° Par un ascendant ou par une personne ayant autorité ; 4° Avec l'usage d'une arme ; 5° Par plusieurs personnes agissant comme coauteurs.",
+    "summary": "Circonstances aggravantes du viol (10-20 ans)",
+    "metadata": {
+      "source": "Code Pénal sénégalais",
+      "livre": "Livre II",
+      "date_publication": "1965-07-21",
+      "references": ["Art. 285"]
+    }
+  },
+  {
+    "type": "code_penal",
+    "article_number": "Art. 323-1",
+    "title": "Détournement de mineurs",
+    "content": "Quiconque, par fraude ou violence, enlève, détourne, recèle ou fait enlever, détourner ou receler un mineur, est puni d'un emprisonnement de un à trois ans et d'une amende de 50.000 à 500.000 francs.",
+    "summary": "Peine pour détournement de mineurs",
+    "metadata": {
+      "source": "Code Pénal sénégalais",
+      "livre": "Livre II",
+      "date_publication": "1965-07-21"
+    }
+  },
+  {
+    "type": "ohada",
+    "article_number": "Art. 5",
+    "title": "Formes de sociétés commerciales",
+    "content": "Les sociétés commerciales peuvent revêtir l'une des formes suivantes : 1° Société en nom collectif ; 2° Société en commandite simple ; 3° Société à responsabilité limitée ; 4° Société anonyme ; 5° Société en participation. Toute société commerciale doit être immatriculée au Registre du Commerce et du Crédit Mobilier.",
+    "summary": "Les 5 formes de sociétés OHADA",
+    "metadata": {
+      "source": "Acte uniforme OHADA relatif au droit des sociétés commerciales et du GIE",
+      "date_publication": "1997-04-17",
+      "revision": "2014-01-30"
+    }
+  },
+  {
+    "type": "ohada",
+    "article_number": "Art. 309",
+    "title": "Capital minimum de la SARL",
+    "content": "Le capital social de la société à responsabilité limitée est librement fixé par les associés dans les statuts. Il est divisé en parts sociales égales dont la valeur nominale ne peut être inférieure à 5.000 francs CFA.",
+    "summary": "Pas de capital minimum pour SARL OHADA",
+    "metadata": {
+      "source": "Acte uniforme OHADA - Sociétés commerciales",
+      "date_publication": "2014-01-30"
+    }
+  },
+  {
+    "type": "ohada",
+    "article_number": "Art. 385",
+    "title": "Capital minimum de la SA",
+    "content": "Le capital social de la société anonyme doit être au moins égal à 10.000.000 de francs CFA. Il peut être inférieur à ce montant mais ne peut être inférieur à 1.000.000 de francs CFA lorsque la société ne fait pas publiquement appel à l'épargne.",
+    "summary": "Capital SA : 10M FCFA (ou 1M sans appel public)",
+    "metadata": {
+      "source": "Acte uniforme OHADA - Sociétés commerciales",
+      "date_publication": "2014-01-30"
+    }
+  },
+  {
+    "type": "code_procedure_civile",
+    "article_number": "Art. 32",
+    "title": "Compétence territoriale",
+    "content": "Le tribunal territorialement compétent est, sauf disposition contraire : 1° En matière personnelle ou mobilière, celui du domicile du défendeur ; 2° En matière réelle immobilière, celui de la situation de l'immeuble ; 3° En matière de pension alimentaire, celui du domicile du créancier.",
+    "summary": "Règles de compétence territoriale des tribunaux",
+    "metadata": {
+      "source": "Code de Procédure Civile sénégalais",
+      "date_publication": "1964"
+    }
+  },
+  {
+    "type": "code_procedure_civile",
+    "article_number": "Art. 68",
+    "title": "Délai pour conclure",
+    "content": "Après la clôture de l'instruction, les parties disposent d'un délai d'un mois pour déposer leurs conclusions. Ce délai peut être prorogé par le juge sur demande motivée. À défaut de dépôt dans le délai, la partie est réputée s'en tenir à ses conclusions antérieures.",
+    "summary": "Délai d'un mois pour conclure après clôture",
+    "metadata": {
+      "source": "Code de Procédure Civile sénégalais",
+      "date_publication": "1964"
+    }
+  },
+  {
+    "type": "code_procedure_civile",
+    "article_number": "Art. 143",
+    "title": "Délai d'appel en matière civile",
+    "content": "L'appel doit être interjeté dans le délai d'un mois à compter de la signification du jugement. Ce délai est porté à deux mois si le défendeur demeure hors du territoire de la République. L'appel est formé par déclaration au greffe de la juridiction dont la décision est attaquée.",
+    "summary": "Délai d'appel civil : 1 mois (ou 2 mois si à l'étranger)",
+    "metadata": {
+      "source": "Code de Procédure Civile sénégalais",
+      "date_publication": "1964",
+      "references": ["Art. 144", "Art. 145"]
+    }
+  },
+  {
+    "type": "loi",
+    "article_number": "Art. 2",
+    "title": "Prescription de l'action publique - Crime",
+    "content": "L'action publique résultant d'un crime se prescrit par dix années révolues à compter du jour où le crime a été commis, si dans cet intervalle il n'a été fait aucun acte d'instruction ou de poursuite.",
+    "summary": "Prescription des crimes : 10 ans",
+    "metadata": {
+      "source": "Loi relative à la prescription",
+      "date_publication": "1965-07-21",
+      "references": ["Art. 3", "Art. 4"]
+    }
+  },
+  {
+    "type": "loi",
+    "article_number": "Art. 3",
+    "title": "Prescription de l'action publique - Délit",
+    "content": "L'action publique résultant d'un délit se prescrit par trois années révolues à compter du jour où le délit a été commis, si dans cet intervalle il n'a été fait aucun acte d'instruction ou de poursuite.",
+    "summary": "Prescription des délits : 3 ans",
+    "metadata": {
+      "source": "Loi relative à la prescription",
+      "date_publication": "1965-07-21"
+    }
+  },
+  {
+    "type": "loi",
+    "article_number": "Art. 4",
+    "title": "Prescription de l'action publique - Contravention",
+    "content": "L'action publique résultant d'une contravention se prescrit par une année révolue à compter du jour où la contravention a été commise.",
+    "summary": "Prescription des contraventions : 1 an",
+    "metadata": {
+      "source": "Loi relative à la prescription",
+      "date_publication": "1965-07-21"
+    }
+  },
+  {
+    "type": "code_penal",
+    "article_number": "Art. 255",
+    "title": "Diffamation",
+    "content": "La diffamation est l'allégation ou l'imputation d'un fait qui porte atteinte à l'honneur ou à la considération de la personne à laquelle le fait est imputé. La diffamation publique est punie d'un emprisonnement de un mois à un an et d'une amende de 50.000 à 500.000 francs ou de l'une de ces deux peines seulement.",
+    "summary": "Définition et peine de la diffamation publique",
+    "metadata": {
+      "source": "Code Pénal sénégalais",
+      "livre": "Livre II",
+      "titre": "Des crimes contre la personne",
+      "date_publication": "1965-07-21"
+    }
+  },
+  {
+    "type": "code_penal",
+    "article_number": "Art. 256",
+    "title": "Injure publique",
+    "content": "L'injure est toute expression outrageante, terme de mépris ou invective qui ne renferme l'imputation d'aucun fait précis. L'injure publique est punie d'un emprisonnement de un à six mois et d'une amende de 20.000 à 200.000 francs ou de l'une de ces deux peines seulement.",
+    "summary": "Définition et peine de l'injure publique",
+    "metadata": {
+      "source": "Code Pénal sénégalais",
+      "livre": "Livre II",
+      "date_publication": "1965-07-21",
+      "references": ["Art. 255"]
+    }
+  },
+  {
+    "type": "code_penal",
+    "article_number": "Art. 353",
+    "title": "Corruption active",
+    "content": "Quiconque aura proposé, sans droit, à tout moment, directement ou indirectement, des offres, des promesses, des dons, des présents ou des avantages quelconques à un agent public pour qu'il fasse ou s'abstienne de faire un acte de sa fonction, sera puni d'un emprisonnement de deux à cinq ans et d'une amende de 500.000 à 5.000.000 de francs.",
+    "summary": "Peine pour corruption d'agent public (2-5 ans)",
+    "metadata": {
+      "source": "Code Pénal sénégalais",
+      "livre": "Livre III",
+      "titre": "Des atteintes à l'action de la justice et de l'administration",
+      "date_publication": "1965-07-21"
+    }
+  },
+  {
+    "type": "code_penal",
+    "article_number": "Art. 163",
+    "title": "Faux en écriture",
+    "content": "Quiconque aura contrefait, falsifié ou altéré des actes ou écrits publics ou authentiques, ou qui aura fait usage de ces actes contrefaits, falsifiés ou altérés, sera puni de la réclusion criminelle de cinq à dix ans et d'une amende de 100.000 à 1.000.000 de francs.",
+    "summary": "Peine pour faux en écriture publique (5-10 ans)",
+    "metadata": {
+      "source": "Code Pénal sénégalais",
+      "livre": "Livre II",
+      "titre": "Des faux",
+      "date_publication": "1965-07-21"
+    }
+  },
+  {
+    "type": "code_penal",
+    "article_number": "Art. 348",
+    "title": "Rébellion",
+    "content": "La rébellion est l'attaque ou la résistance avec violences ou menaces envers les dépositaires de l'autorité publique ou de la force publique agissant dans l'exercice de leurs fonctions. Elle est punie d'un emprisonnement de six mois à deux ans et d'une amende de 50.000 à 500.000 francs.",
+    "summary": "Définition et peine de la rébellion",
+    "metadata": {
+      "source": "Code Pénal sénégalais",
+      "livre": "Livre III",
+      "date_publication": "1965-07-21"
+    }
+  },
+  {
+    "type": "code_penal",
+    "article_number": "Art. 305",
+    "title": "Enlèvement et séquestration",
+    "content": "L'enlèvement et la séquestration d'une personne quelconque, opérés sans ordre des autorités constituées et hors les cas prévus par la loi, sont punis de la réclusion criminelle de cinq à dix ans. Si la séquestration a duré plus d'un mois, la peine est portée à la réclusion de dix à vingt ans.",
+    "summary": "Peine pour enlèvement (5-10 ans, 10-20 si >1 mois)",
+    "metadata": {
+      "source": "Code Pénal sénégalais",
+      "livre": "Livre II",
+      "titre": "Des atteintes à la liberté individuelle",
+      "date_publication": "1965-07-21"
+    }
+  },
+  {
+    "type": "code_travail",
+    "article_number": "Art. L. 103",
+    "title": "Durée légale du travail",
+    "content": "La durée légale du travail est fixée à quarante heures par semaine dans tous les établissements publics ou privés, laïques ou religieux. Les heures effectuées au-delà de la durée légale constituent des heures supplémentaires et donnent lieu à une majoration de salaire.",
+    "summary": "Durée légale : 40 heures/semaine",
+    "metadata": {
+      "source": "Code du Travail sénégalais",
+      "livre": "Livre II",
+      "titre": "De la durée du travail",
+      "date_publication": "1997-12-01"
+    }
+  },
+  {
+    "type": "code_travail",
+    "article_number": "Art. L. 104",
+    "title": "Heures supplémentaires",
+    "content": "Les heures supplémentaires accomplies au-delà de la durée légale hebdomadaire donnent lieu à une majoration de salaire de 15% pour les huit premières heures et de 40% pour les heures suivantes. Les heures de nuit et du dimanche sont majorées de 60%.",
+    "summary": "Majoration heures sup : 15% (8h) puis 40%",
+    "metadata": {
+      "source": "Code du Travail sénégalais",
+      "date_publication": "1997-12-01",
+      "references": ["Art. L. 103"]
+    }
+  },
+  {
+    "type": "code_travail",
+    "article_number": "Art. L. 143",
+    "title": "Salaire minimum interprofessionnel garanti",
+    "content": "Un salaire minimum interprofessionnel garanti est fixé par décret pris après avis de la Commission Nationale du Travail. Tout employeur est tenu de verser à ses travailleurs un salaire au moins égal au SMIG. Le non-paiement du SMIG est puni des peines prévues par le Code Pénal.",
+    "summary": "Obligation de respecter le SMIG",
+    "metadata": {
+      "source": "Code du Travail sénégalais",
+      "livre": "Livre III",
+      "titre": "Du salaire",
+      "date_publication": "1997-12-01"
+    }
+  },
+  {
+    "type": "code_famille",
+    "article_number": "Art. 152",
+    "title": "Âge minimum du mariage",
+    "content": "L'âge minimum du mariage est fixé à vingt ans pour l'homme et seize ans pour la femme. Toutefois, le Président du Tribunal départemental peut, pour des motifs graves, accorder des dispenses d'âge.",
+    "summary": "Âge minimum mariage : 20 ans (H) et 16 ans (F)",
+    "metadata": {
+      "source": "Code de la Famille sénégalais",
+      "livre": "Livre IV",
+      "titre": "Des conditions du mariage",
+      "date_publication": "1972-06-12",
+      "note": "Des débats sont en cours pour augmenter l'âge minimum à 18 ans pour les deux sexes"
+    }
+  },
+  {
+    "type": "code_famille",
+    "article_number": "Art. 277-1",
+    "title": "Régime matrimonial - Options",
+    "content": "Les futurs époux peuvent choisir librement leur régime matrimonial dans les limites établies par la loi. À défaut de contrat de mariage, les époux sont soumis au régime de la séparation des biens. Les régimes matrimoniaux possibles sont : la séparation des biens, la communauté des biens meubles et acquêts, la participation aux acquêts.",
+    "summary": "Régime légal : séparation des biens par défaut",
+    "metadata": {
+      "source": "Code de la Famille sénégalais",
+      "livre": "Livre IV",
+      "date_publication": "1972-06-12"
+    }
+  },
+  {
+    "type": "code_famille",
+    "article_number": "Art. 549",
+    "title": "Partage successoral - Règles",
+    "content": "La succession est dévolue selon les règles du droit musulman pour les personnes qui ont expressément opté pour ce régime, et selon les règles du droit moderne pour les autres. En l'absence d'option, c'est le droit moderne qui s'applique. Les héritiers peuvent toujours transiger sur le partage.",
+    "summary": "Choix entre droit musulman et droit moderne pour succession",
+    "metadata": {
+      "source": "Code de la Famille sénégalais",
+      "livre": "Livre VI - Des successions",
+      "date_publication": "1972-06-12"
+    }
+  },
+  {
+    "type": "code_penal",
+    "article_number": "Art. 411",
+    "title": "Recel",
+    "content": "Quiconque aura, en connaissance de cause, recelé, en tout ou partie, des choses enlevées, détournées ou obtenues à l'aide d'un crime ou d'un délit, sera puni d'un emprisonnement de un à cinq ans et d'une amende de 20.000 à 1.000.000 de francs. Le receleur est puni des mêmes peines que l'auteur du crime ou du délit.",
+    "summary": "Peine pour recel : même peine que l'infraction principale",
+    "metadata": {
+      "source": "Code Pénal sénégalais",
+      "livre": "Livre III",
+      "date_publication": "1965-07-21"
+    }
+  },
+  {
+    "type": "code_penal",
+    "article_number": "Art. 227",
+    "title": "Dénonciation calomnieuse",
+    "content": "Quiconque dénonce calomnieusement à l'autorité judiciaire ou administrative des faits de nature à entraîner des sanctions judiciaires, administratives ou disciplinaires et qu'il sait totalement ou partiellement inexacts, est puni d'un emprisonnement de six mois à trois ans et d'une amende de 100.000 à 1.000.000 de francs.",
+    "summary": "Peine pour dénonciation calomnieuse (6 mois - 3 ans)",
+    "metadata": {
+      "source": "Code Pénal sénégalais",
+      "livre": "Livre II",
+      "date_publication": "1965-07-21"
+    }
+  },
+  {
+    "type": "code_procedure_penale",
+    "article_number": "Art. 231",
+    "title": "Constitution de partie civile",
+    "content": "La personne lésée par un crime ou un délit peut se constituer partie civile devant le juge d'instruction compétent ou devant la juridiction de jugement. La constitution de partie civile peut intervenir à tout moment de l'instruction. Elle doit être signifiée au ministère public et à la personne mise en examen.",
+    "summary": "Modalités de constitution de partie civile",
+    "metadata": {
+      "source": "Code de Procédure Pénale sénégalais",
+      "date_publication": "1965"
+    }
+  },
+  {
+    "type": "code_procedure_penale",
+    "article_number": "Art. 319",
+    "title": "Assistance d'un avocat",
+    "content": "Toute personne mise en examen ou poursuivie a le droit de se faire assister par un avocat de son choix à tous les stades de la procédure. Si elle ne peut en désigner un, il lui en sera commis un d'office en matière criminelle. L'avocat a accès au dossier et peut correspondre librement avec son client.",
+    "summary": "Droit à l'assistance d'un avocat (commis d'office en criminel)",
+    "metadata": {
+      "source": "Code de Procédure Pénale sénégalais",
+      "date_publication": "1965"
+    }
+  },
+  {
+    "type": "ohada",
+    "article_number": "Art. 438",
+    "title": "Faute de gestion - Responsabilité des dirigeants",
+    "content": "Les dirigeants sociaux sont responsables, individuellement ou solidairement, selon le cas, envers la société ou envers les tiers, soit des infractions aux dispositions législatives ou réglementaires applicables aux sociétés commerciales, soit des violations des statuts, soit des fautes commises dans leur gestion.",
+    "summary": "Responsabilité des dirigeants pour faute de gestion",
+    "metadata": {
+      "source": "Acte uniforme OHADA - Sociétés commerciales",
+      "date_publication": "2014-01-30"
+    }
+  }
+]

@@ -10,13 +10,11 @@ import Dashboard from "./pages/Dashboard";
 import Notebook from "./pages/Notebook";
 import Auth from "./pages/Auth";
 import NotFound from "./pages/NotFound";
-import { LegalLayout } from "@/components/legal/LegalLayout";
 import {
-  LegalHub,
   CalculatorPage,
   GeneratorPage,
   SimulationPage,
-  DashboardPage,
+  DashboardPage as LegalDashboardPage,
   TemplatesPage,
   JurisprudencePage,
 } from "./pages/legal";
@@ -53,22 +51,10 @@ const AppContent = () => {
 
       {/* Legal Tools Routes */}
       <Route
-        path="/legal"
-        element={
-          <ProtectedRoute fallback={<Auth />}>
-            <LegalLayout>
-              <LegalHub />
-            </LegalLayout>
-          </ProtectedRoute>
-        }
-      />
-      <Route
         path="/legal/calculator"
         element={
           <ProtectedRoute fallback={<Auth />}>
-            <LegalLayout>
-              <CalculatorPage />
-            </LegalLayout>
+            <CalculatorPage />
           </ProtectedRoute>
         }
       />
@@ -76,9 +62,7 @@ const AppContent = () => {
         path="/legal/generator"
         element={
           <ProtectedRoute fallback={<Auth />}>
-            <LegalLayout>
-              <GeneratorPage />
-            </LegalLayout>
+            <GeneratorPage />
           </ProtectedRoute>
         }
       />
@@ -86,9 +70,7 @@ const AppContent = () => {
         path="/legal/simulation"
         element={
           <ProtectedRoute fallback={<Auth />}>
-            <LegalLayout>
-              <SimulationPage />
-            </LegalLayout>
+            <SimulationPage />
           </ProtectedRoute>
         }
       />
@@ -96,9 +78,7 @@ const AppContent = () => {
         path="/legal/dashboard"
         element={
           <ProtectedRoute fallback={<Auth />}>
-            <LegalLayout>
-              <DashboardPage />
-            </LegalLayout>
+            <LegalDashboardPage />
           </ProtectedRoute>
         }
       />
@@ -106,9 +86,7 @@ const AppContent = () => {
         path="/legal/templates"
         element={
           <ProtectedRoute fallback={<Auth />}>
-            <LegalLayout>
-              <TemplatesPage />
-            </LegalLayout>
+            <TemplatesPage />
           </ProtectedRoute>
         }
       />
@@ -116,9 +94,7 @@ const AppContent = () => {
         path="/legal/jurisprudence"
         element={
           <ProtectedRoute fallback={<Auth />}>
-            <LegalLayout>
-              <JurisprudencePage />
-            </LegalLayout>
+            <JurisprudencePage />
           </ProtectedRoute>
         }
       />

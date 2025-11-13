@@ -3,7 +3,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
 import { Badge } from '@/components/ui/badge';
-import { Scale, Swords, Loader2, AlertTriangle, Sparkles } from 'lucide-react';
+import { Input } from '@/components/ui/input';
+import { Scale, Swords, Loader2, AlertTriangle, Sparkles, FileText, Upload } from 'lucide-react';
 import { supabase } from '@/integrations/supabase/client';
 import { useToast } from '@/hooks/use-toast';
 
@@ -33,13 +34,19 @@ export function ProsecutorSimulation({ notebookId }: { notebookId?: string }) {
   const [simulationActive, setSimulationActive] = useState(false);
   const [demoMode, setDemoMode] = useState(true);
   const [demoStep, setDemoStep] = useState(0);
+  const [caseContext, setCaseContext] = useState('');
+  const [showContextInput, setShowContextInput] = useState(false);
 
   const startSimulation = () => {
     setSimulationActive(true);
+    const systemMsg = caseContext
+      ? `⚖️ Simulation initiée avec le contexte du dossier. Le Procureur connaît les faits et contestera vos arguments en conséquence.`
+      : `⚖️ Simulation de contre-interrogatoire initiée. Le Procureur de la République est prêt à répondre à vos arguments.`;
+
     setMessages([
       {
         role: 'system',
-        content: '⚖️ Simulation de contre-interrogatoire initiée. Le Procureur de la République est prêt à répondre à vos arguments.',
+        content: systemMsg,
         timestamp: new Date(),
       },
     ]);
@@ -129,12 +136,16 @@ export function ProsecutorSimulation({ notebookId }: { notebookId?: string }) {
         }
 
         // Appel IA réel avec contexte du dossier
+        const contextPrompt = caseContext
+          ? `\n\nContexte du dossier :\n${caseContext}\n\nBasant toi sur ce contexte, conteste l'argument en utilisant les faits du dossier.`
+          : '';
+
         const { data, error } = await supabase.functions.invoke('send-legal-chat-message', {
           body: {
             session_id: notebookId,
             message: `Tu es le Procureur de la République du Sénégal dans une simulation de contre-interrogatoire. Un avocat de la défense vient de présenter l'argument suivant :
 
-"${currentInput}"
+"${currentInput}"${contextPrompt}
 
 Réponds en tant que procureur en :
 1. Contestant cet argument de manière professionnelle mais ferme
@@ -200,24 +211,76 @@ Maximum 4-5 phrases. Sois direct et percutant.`,
         </CardHeader>
         <CardContent className="space-y-4">
           {!simulationActive ? (
-            <div className="text-center py-8 space-y-4">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto">
-                <Scale className="h-8 w-8 text-purple-700" />
-              </div>
-              <div>
-                <h3 className="font-semibold text-lg mb-2">Préparez votre plaidoirie</h3>
-                <p className="text-sm text-gray-600 mb-4">
-                  Testez vos arguments face à un procureur IA qui les remettra en question
-                </p>
-                <div className="flex items-center justify-center gap-2 text-xs text-amber-700 bg-amber-50 border border-amber-200 rounded-lg p-3 mb-4">
-                  <AlertTriangle className="h-4 w-4" />
-                  <span>Les 2 premiers échanges sont une démo. Ensuite, l'IA réelle prend le relais.</span>
+            <div className="py-8 space-y-6">
+              <div className="text-center space-y-4">
+                <div className="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mx-auto">
+                  <Scale className="h-8 w-8 text-slate-700" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-lg mb-2">Préparez votre plaidoirie</h3>
+                  <p className="text-sm text-gray-600 mb-4">
+                    Testez vos arguments face à un procureur IA qui les remettra en question
+                  </p>
+                  <div className="flex items-center justify-center gap-2 text-xs text-amber-700 bg-amber-50 border border-amber-200 rounded-lg p-3 mb-4">
+                    <AlertTriangle className="h-4 w-4" />
+                    <span>Les 2 premiers échanges sont une démo. Ensuite, l'IA réelle prend le relais.</span>
+                  </div>
                 </div>
               </div>
-              <Button onClick={startSimulation} size="lg" className="bg-purple-700 hover:bg-purple-800">
-                <Swords className="mr-2 h-4 w-4" />
-                Démarrer la simulation
-              </Button>
+
+              {/* Section Contexte du dossier */}
+              <div className="border-t pt-6">
+                <Button
+                  variant="outline"
+                  onClick={() => setShowContextInput(!showContextInput)}
+                  className="w-full mb-4"
+                >
+                  <FileText className="mr-2 h-4 w-4" />
+                  {showContextInput ? 'Masquer' : 'Ajouter'} le contexte du dossier (recommandé)
+                </Button>
+
+                {showContextInput && (
+                  <div className="space-y-3 bg-slate-50 border border-slate-200 rounded-lg p-4">
+                    <div className="flex items-start gap-2 text-xs text-slate-700 bg-white border border-slate-200 rounded p-2">
+                      <FileText className="h-4 w-4 mt-0.5 flex-shrink-0 text-slate-500" />
+                      <div>
+                        <p className="font-medium mb-1">Pourquoi ajouter le contexte ?</p>
+                        <p>
+                          En fournissant un résumé des faits, le procureur IA pourra faire un contre-interrogatoire plus réaliste
+                          basé sur les éléments spécifiques de votre dossier (témoignages, preuves, circonstances).
+                        </p>
+                      </div>
+                    </div>
+
+                    <Textarea
+                      placeholder={`Exemple :
+- Accusation : Vol avec violence en réunion
+- Faits : Le 15 janvier 2025 vers 22h, boutique Sène cambriolée
+- Éléments à charge : 2 témoins identifient le client, traces ADN
+- Éléments à décharge : Client affirme être chez lui, pas d'antécédent
+- Circonstances : Éclairage faible, témoins à 50m de distance`}
+                      value={caseContext}
+                      onChange={(e) => setCaseContext(e.target.value)}
+                      rows={6}
+                      className="resize-none"
+                    />
+
+                    {caseContext && (
+                      <div className="flex items-center gap-2 text-xs text-green-700 bg-green-50 border border-green-200 rounded p-2">
+                        <Sparkles className="h-3 w-3" />
+                        <span>Contexte chargé - Le procureur IA utilisera ces informations</span>
+                      </div>
+                    )}
+                  </div>
+                )}
+              </div>
+
+              <div className="text-center pt-4">
+                <Button onClick={startSimulation} size="lg" className="bg-slate-700 hover:bg-slate-800">
+                  <Swords className="mr-2 h-4 w-4" />
+                  Démarrer la simulation
+                </Button>
+              </div>
             </div>
           ) : (
             <>

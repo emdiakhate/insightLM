@@ -1,4 +1,3 @@
-export { default as LegalHub } from './LegalHub';
 export { default as CalculatorPage } from './CalculatorPage';
 export { default as GeneratorPage } from './GeneratorPage';
 export { default as SimulationPage } from './SimulationPage';

@@ -1,5 +1,5 @@
 import React from 'react';
-import DashboardHeader from '@/components/dashboard/DashboardHeader';
+import { MainLayout } from '@/components/layout/MainLayout';
 import NotebookGrid from '@/components/dashboard/NotebookGrid';
 import EmptyDashboard from '@/components/dashboard/EmptyDashboard';
 import { useNotebooks } from '@/hooks/useNotebooks';
@@ -15,97 +15,84 @@ const Dashboard = () => {
   // Show loading while auth is initializing
   if (authLoading) {
     return (
-      <div className="min-h-screen bg-gray-50">
-        <DashboardHeader userEmail={user?.email} />
-        <main className="max-w-7xl mx-auto px-6 py-8">
-          <div className="mb-8">
-            <h1 className="text-4xl font-medium text-gray-900 mb-2">{t('welcomeToInsightsLM').replace('InsightsLM', 'LexAI Sénégal')}</h1>
-          </div>
-          <div className="text-center py-16">
-            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto mb-4"></div>
+      <MainLayout>
+        <div className="flex items-center justify-center h-full">
+          <div className="text-center">
+            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-slate-700 mx-auto mb-4"></div>
             <p className="text-gray-600">{t('initializing')}</p>
           </div>
-        </main>
-      </div>
+        </div>
+      </MainLayout>
     );
   }
 
   // Show auth error if present
   if (authError) {
     return (
-      <div className="min-h-screen bg-gray-50">
-        <DashboardHeader userEmail={user?.email} />
-        <main className="max-w-7xl mx-auto px-6 py-8">
-          <div className="mb-8">
-            <h1 className="text-4xl font-medium text-gray-900 mb-2">{t('welcomeToInsightsLM').replace('InsightsLM', 'LexAI Sénégal')}</h1>
-          </div>
-          <div className="text-center py-16">
+      <MainLayout>
+        <div className="flex items-center justify-center h-full">
+          <div className="text-center">
             <p className="text-red-600">{t('authenticationError')}: {authError}</p>
-            <button 
-              onClick={() => window.location.reload()} 
-              className="mt-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+            <button
+              onClick={() => window.location.reload()}
+              className="mt-4 px-4 py-2 bg-slate-700 text-white rounded hover:bg-slate-800"
             >
               {t('retry')}
             </button>
           </div>
-        </main>
-      </div>
+        </div>
+      </MainLayout>
     );
   }
 
   // Show notebooks loading state
   if (isLoading) {
     return (
-      <div className="min-h-screen bg-gray-50">
-        <DashboardHeader userEmail={user?.email} />
-        <main className="max-w-7xl mx-auto px-6 py-8">
-          <div className="mb-8">
-            <h1 className="text-4xl font-medium text-gray-900 mb-2">{t('welcomeToInsightsLM').replace('InsightsLM', 'LexAI Sénégal')}</h1>
-          </div>
-          <div className="text-center py-16">
-            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto mb-4"></div>
+      <MainLayout>
+        <div className="flex items-center justify-center h-full">
+          <div className="text-center">
+            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-slate-700 mx-auto mb-4"></div>
             <p className="text-gray-600">{t('loadingNotebooks')}</p>
           </div>
-        </main>
-      </div>
+        </div>
+      </MainLayout>
     );
   }
 
   // Show notebooks error if present
   if (isError && error) {
     return (
-      <div className="min-h-screen bg-gray-50">
-        <DashboardHeader userEmail={user?.email} />
-        <main className="max-w-7xl mx-auto px-6 py-8">
-          <div className="mb-8">
-            <h1 className="text-4xl font-medium text-gray-900 mb-2">{t('welcomeToInsightsLM').replace('InsightsLM', 'LexAI Sénégal')}</h1>
-          </div>
-          <div className="text-center py-16">
+      <MainLayout>
+        <div className="flex items-center justify-center h-full">
+          <div className="text-center">
             <p className="text-red-600">{t('error')}: {error}</p>
-            <button 
-              onClick={() => window.location.reload()} 
-              className="mt-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+            <button
+              onClick={() => window.location.reload()}
+              className="mt-4 px-4 py-2 bg-slate-700 text-white rounded hover:bg-slate-800"
             >
               {t('retry')}
             </button>
           </div>
-        </main>
-      </div>
+        </div>
+      </MainLayout>
     );
   }
 
   return (
-    <div className="min-h-screen bg-white">
-      <DashboardHeader userEmail={user?.email} />
-      
-      <main className="max-w-7xl mx-auto px-6 py-[60px]">
+    <MainLayout>
+      <div className="p-8">
         <div className="mb-8">
-          <h1 className="font-medium text-gray-900 mb-2 text-5xl">{t('welcomeToInsightsLM').replace('InsightsLM', 'YnnoviaLM')}</h1>
+          <h1 className="text-3xl font-semibold text-gray-900 mb-2">
+            Mes Dossiers Juridiques
+          </h1>
+          <p className="text-gray-600">
+            Gérez vos dossiers, ajoutez des pièces et interrogez vos documents avec l'IA
+          </p>
         </div>
 
         {hasNotebooks ? <NotebookGrid /> : <EmptyDashboard />}
-      </main>
-    </div>
+      </div>
+    </MainLayout>
   );
 };
 

@@ -2,12 +2,14 @@ import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { ScrollArea } from '@/components/ui/scroll-area';
-import { MoreVertical, Plus, Edit, Bot, User, Loader2, AlertCircle, CheckCircle2, RefreshCw, BookOpen, FileText, HelpCircle, Clock, List, Layers } from 'lucide-react';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { MoreVertical, Plus, Edit, Bot, User, Loader2, AlertCircle, CheckCircle2, RefreshCw, BookOpen, FileText, HelpCircle, Clock, List, Layers, Languages } from 'lucide-react';
 import { useNotes, Note } from '@/hooks/useNotes';
 import { useAudioOverview } from '@/hooks/useAudioOverview';
 import { useNotebooks } from '@/hooks/useNotebooks';
 import { useSources } from '@/hooks/useSources';
 import { useStudioFeatures, FeatureType } from '@/hooks/useStudioFeatures';
+import { useTranslatedAudio } from '@/hooks/useTranslatedAudio';
 import { useQueryClient } from '@tanstack/react-query';
 import NoteEditor from './NoteEditor';
 import AudioPlayer from './AudioPlayer';
@@ -30,6 +32,7 @@ const StudioSidebar = ({
   const [editingNote, setEditingNote] = useState<Note | null>(null);
   const [isCreatingNote, setIsCreatingNote] = useState(false);
   const [audioError, setAudioError] = useState(false);
+  const [selectedVoice, setSelectedVoice] = useState('nova');
   const { t } = useLanguage();
   const { toast } = useToast();
 
@@ -70,6 +73,11 @@ const StudioSidebar = ({
     saveAsNote,
     clearGeneratedContent,
   } = useStudioFeatures(notebookId);
+
+  const {
+    generateTranslatedAudio,
+    isGenerating: isGeneratingTranslatedAudio,
+  } = useTranslatedAudio(notebookId);
 
   const queryClient = useQueryClient();
   const notebook = notebooks?.find(n => n.id === notebookId);
@@ -385,6 +393,51 @@ const StudioSidebar = ({
                   </Button>
                 </div>
               </Card>}
+          </Card>
+
+          {/* Translated Audio Card */}
+          <Card className="p-4 mb-4 border border-indigo-200 bg-indigo-50">
+            <div className="flex items-center space-x-2 mb-3">
+              <Languages className="h-5 w-5 text-indigo-600" />
+              <h3 className="font-medium text-gray-900">{t('translatedAudio')}</h3>
+            </div>
+            <p className="text-sm text-gray-600 mb-3">{t('translatedAudioDescription')}</p>
+
+            <div className="flex items-center space-x-2 mb-3">
+              <span className="text-sm text-gray-700">{t('selectVoice')} :</span>
+              <Select value={selectedVoice} onValueChange={setSelectedVoice}>
+                <SelectTrigger className="w-32 h-8">
+                  <SelectValue />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="nova">Nova</SelectItem>
+                  <SelectItem value="alloy">Alloy</SelectItem>
+                  <SelectItem value="echo">Echo</SelectItem>
+                  <SelectItem value="fable">Fable</SelectItem>
+                  <SelectItem value="onyx">Onyx</SelectItem>
+                  <SelectItem value="shimmer">Shimmer</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+
+            <Button
+              size="sm"
+              onClick={() => generateTranslatedAudio({ voice: selectedVoice })}
+              disabled={isGeneratingTranslatedAudio || !hasProcessedSource}
+              className="w-full text-white bg-indigo-600 hover:bg-indigo-700"
+            >
+              {isGeneratingTranslatedAudio ? (
+                <>
+                  <Loader2 className="h-4 w-4 mr-2 animate-spin" />
+                  {t('translatedAudioGenerating')}
+                </>
+              ) : (
+                <>
+                  <Languages className="h-4 w-4 mr-2" />
+                  {t('generate')}
+                </>
+              )}
+            </Button>
           </Card>
 
           {/* Feature Cards Grid */}

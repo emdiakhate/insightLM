@@ -179,6 +179,14 @@ export const translations = {
     featureComingSoonDescription: "This feature will be available soon.",
     generateFeature: "Generate",
     generatingFeature: "Generating...",
+
+    // Translated Audio
+    translatedAudio: "Translated Audio",
+    translatedAudioDescription: "Translate source content and generate full audio narration",
+    translatedAudioGenerating: "Translating and generating audio...",
+    translatedAudioReady: "Translated audio ready!",
+    translatedAudioFailed: "Translated audio generation failed",
+    selectVoice: "Voice",
   },
   fr: {
     // Auth
@@ -360,6 +368,14 @@ export const translations = {
     featureComingSoonDescription: "Cette fonctionnalité sera bientôt disponible.",
     generateFeature: "Générer",
     generatingFeature: "Génération...",
+
+    // Translated Audio
+    translatedAudio: "Traduction audio",
+    translatedAudioDescription: "Traduire le contenu et générer la narration audio complète",
+    translatedAudioGenerating: "Traduction et génération audio en cours...",
+    translatedAudioReady: "Traduction audio prête !",
+    translatedAudioFailed: "La génération de la traduction audio a échoué",
+    selectVoice: "Voix",
   }
 };
 

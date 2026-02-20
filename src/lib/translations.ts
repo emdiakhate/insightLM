@@ -161,6 +161,24 @@ export const translations = {
     signedOutSuccess: "You have been successfully signed out.",
     signedOutLocally: "You have been signed out locally.",
     chooseFile: "Choose file",
+
+    // Studio Feature Cards
+    studyGuide: "Study Guide",
+    studyGuideDescription: "Create a comprehensive study guide from your sources",
+    briefingDoc: "Briefing Doc",
+    briefingDocDescription: "Generate a structured briefing document",
+    faq: "FAQ",
+    faqDescription: "Generate frequently asked questions and answers",
+    timeline: "Timeline",
+    timelineDescription: "Extract key events in chronological order",
+    tableOfContents: "Table of Contents",
+    tableOfContentsDescription: "Generate a structured outline of your sources",
+    flashcards: "Flashcards",
+    flashcardsDescription: "Create question/answer cards for review",
+    comingSoon: "Coming soon",
+    featureComingSoonDescription: "This feature will be available soon.",
+    generateFeature: "Generate",
+    generatingFeature: "Generating...",
   },
   fr: {
     // Auth
@@ -324,6 +342,24 @@ export const translations = {
     signedOutSuccess: "Vous avez été déconnecté avec succès.",
     signedOutLocally: "Vous avez été déconnecté localement.",
     chooseFile: "Choisir un fichier",
+
+    // Studio Feature Cards
+    studyGuide: "Guide d'étude",
+    studyGuideDescription: "Créer un guide d'étude complet à partir de vos sources",
+    briefingDoc: "Document de synthèse",
+    briefingDocDescription: "Générer un document de synthèse structuré",
+    faq: "FAQ",
+    faqDescription: "Générer des questions fréquentes et leurs réponses",
+    timeline: "Chronologie",
+    timelineDescription: "Extraire les événements clés par ordre chronologique",
+    tableOfContents: "Table des matières",
+    tableOfContentsDescription: "Générer un plan structuré de vos sources",
+    flashcards: "Flashcards",
+    flashcardsDescription: "Créer des cartes question/réponse pour réviser",
+    comingSoon: "Bientôt disponible",
+    featureComingSoonDescription: "Cette fonctionnalité sera bientôt disponible.",
+    generateFeature: "Générer",
+    generatingFeature: "Génération...",
   }
 };
 

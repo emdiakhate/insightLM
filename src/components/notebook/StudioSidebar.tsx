@@ -7,9 +7,11 @@ import { useNotes, Note } from '@/hooks/useNotes';
 import { useAudioOverview } from '@/hooks/useAudioOverview';
 import { useNotebooks } from '@/hooks/useNotebooks';
 import { useSources } from '@/hooks/useSources';
+import { useStudioFeatures, FeatureType } from '@/hooks/useStudioFeatures';
 import { useQueryClient } from '@tanstack/react-query';
 import NoteEditor from './NoteEditor';
 import AudioPlayer from './AudioPlayer';
+import StudioContentViewer from './StudioContentViewer';
 import { Citation } from '@/types/message';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useToast } from '@/hooks/use-toast';
@@ -59,6 +61,15 @@ const StudioSidebar = ({
     generationStatus,
     checkAudioExpiry
   } = useAudioOverview(notebookId);
+
+  const {
+    generateFeature,
+    generatedContent,
+    generatingFeature,
+    isGenerating: isGeneratingFeature,
+    saveAsNote,
+    clearGeneratedContent,
+  } = useStudioFeatures(notebookId);
 
   const queryClient = useQueryClient();
   const notebook = notebooks?.find(n => n.id === notebookId);
@@ -163,11 +174,24 @@ const StudioSidebar = ({
     refreshAudioUrl(notebookId);
   };
 
+  const activeFeatures: FeatureType[] = ['faq', 'briefingDoc', 'studyGuide'];
+
   const handleFeatureClick = (featureKey: string) => {
-    toast({
-      title: t('comingSoon'),
-      description: t('featureComingSoonDescription'),
-    });
+    if (activeFeatures.includes(featureKey as FeatureType)) {
+      if (!hasProcessedSource) {
+        toast({
+          title: t('addSourceToStart'),
+          description: t('clickAddSource'),
+        });
+        return;
+      }
+      generateFeature(featureKey as FeatureType);
+    } else {
+      toast({
+        title: t('comingSoon'),
+        description: t('featureComingSoonDescription'),
+      });
+    }
   };
 
   const getStatusDisplay = () => {
@@ -279,6 +303,18 @@ const StudioSidebar = ({
     },
   ];
 
+  // Show generated content viewer
+  if (generatedContent) {
+    return <div className="w-full bg-gray-50 border-l border-gray-200 flex flex-col h-full overflow-hidden">
+        <StudioContentViewer
+          featureType={generatedContent.featureType}
+          content={generatedContent.content}
+          onClose={clearGeneratedContent}
+          onSaveAsNote={saveAsNote}
+        />
+      </div>;
+  }
+
   if (isEditingMode) {
     return <div className="w-full bg-gray-50 border-l border-gray-200 flex flex-col h-full overflow-hidden">
         <NoteEditor note={editingNote || undefined} onSave={handleSaveNote} onDelete={editingNote ? handleDeleteNote : undefined} onCancel={handleCancel} isLoading={isCreating || isUpdating || isDeleting} onCitationClick={onCitationClick} />
@@ -355,18 +391,29 @@ const StudioSidebar = ({
           <div className="grid grid-cols-2 gap-2 mb-4">
             {featureCards.map((feature) => {
               const IconComponent = feature.icon;
+              const isThisGenerating = generatingFeature === feature.key;
+              const isActive = activeFeatures.includes(feature.key as FeatureType);
+              const isDisabled = isGeneratingFeature || !hasProcessedSource;
               return (
                 <Card
                   key={feature.key}
-                  className={`p-3 border ${feature.borderColor} ${feature.bgColor} hover:shadow-md transition-all cursor-pointer group`}
-                  onClick={() => handleFeatureClick(feature.key)}
+                  className={`p-3 border ${feature.borderColor} ${feature.bgColor} transition-all ${
+                    isDisabled ? 'opacity-60 cursor-not-allowed' : 'hover:shadow-md cursor-pointer'
+                  } ${!isActive ? 'opacity-50' : ''}`}
+                  onClick={() => !isDisabled && handleFeatureClick(feature.key)}
                 >
                   <div className="flex flex-col items-start space-y-2">
                     <div className={`w-8 h-8 rounded-lg flex items-center justify-center ${feature.bgColor}`}>
-                      <IconComponent className={`h-4 w-4 ${feature.color}`} />
+                      {isThisGenerating ? (
+                        <Loader2 className={`h-4 w-4 animate-spin ${feature.color}`} />
+                      ) : (
+                        <IconComponent className={`h-4 w-4 ${feature.color}`} />
+                      )}
                     </div>
                     <div>
-                      <h4 className="text-sm font-medium text-gray-900 leading-tight">{feature.label}</h4>
+                      <h4 className="text-sm font-medium text-gray-900 leading-tight">
+                        {isThisGenerating ? t('generatingFeature') : feature.label}
+                      </h4>
                     </div>
                   </div>
                 </Card>
